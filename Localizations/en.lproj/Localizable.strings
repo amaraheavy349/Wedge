@@ -1,0 +1,50 @@
+/* Menu bar */
+"Wedge — keep your Mac open" = "Wedge — keep your Mac open";
+"Lid free to close" = "Lid free to close";
+"Wedged open — Mac stays awake" = "Wedged open — Mac stays awake";
+"Wedge it open" = "Wedge it open";
+"Pull the wedge" = "Pull the wedge";
+"Settings…" = "Settings…";
+"Quit Wedge" = "Quit Wedge";
+
+/* Password prompt */
+"Wedge needs your admin password" = "Wedge needs your admin password";
+"Wedge uses pmset to keep your Mac from sleeping. macOS requires admin rights for this." = "Wedge uses pmset to keep your Mac from sleeping. macOS requires admin rights for this.";
+"The password is stored in your Keychain and only used to toggle macOS sleep behavior. You can revoke access any time by quitting Wedge." = "The password is stored in your Keychain and only used to toggle macOS sleep behavior. You can revoke access any time by quitting Wedge.";
+"Allow" = "Allow";
+"Cancel" = "Cancel";
+"macOS account password" = "macOS account password";
+
+/* Errors */
+"Wrong password" = "Wrong password";
+"macOS didn't accept that password." = "macOS didn't accept that password.";
+"Password rejected" = "Password rejected";
+"Your saved password didn't work. Try again — Wedge will ask once more." = "Your saved password didn't work. Try again — Wedge will ask once more.";
+"pmset failed (exit %d)" = "pmset failed (exit %d)";
+"Unknown error from pmset." = "Unknown error from pmset.";
+"Unexpected error" = "Unexpected error";
+
+/* Settings */
+"Behavior" = "Behavior";
+"Launch Wedge at login" = "Launch Wedge at login";
+"Turn off internal display when lid closes" = "Turn off internal display when lid closes";
+"Saves battery while Wedge keeps the Mac awake." = "Saves battery while Wedge keeps the Mac awake.";
+"Saved password" = "Saved password";
+"Stored in Keychain" = "Stored in Keychain";
+"Not stored" = "Not stored";
+"Forget" = "Forget";
+"Language" = "Language";
+"System default" = "System default";
+"English" = "English";
+"Русский" = "Русский";
+"Restart to apply language" = "Restart to apply language";
+"Wedge will close and reopen with the new language." = "Wedge will close and reopen with the new language.";
+"Restart now" = "Restart now";
+"Later" = "Later";
+"About" = "About";
+"Version" = "Version";
+"Source" = "Source";
+"Wedge holds your Mac awake by toggling pmset disablesleep. It needs your admin password the first time you use it." = "Wedge holds your Mac awake by toggling pmset disablesleep. It needs your admin password the first time you use it.";
+
+/* Window titles */
+"Wedge" = "Wedge";
