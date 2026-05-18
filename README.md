@@ -18,6 +18,10 @@
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
 </p>
 
+<p align="center">
+  <img src="docs/demo.gif" width="640" alt="Pulling the cord from the menubar to wedge the lid open">
+</p>
+
 ---
 
 ## Why
