@@ -12,3 +12,4 @@ DerivedData/
 # Source recordings; only the compressed gif/mp4 derivatives are committed.
 docs/*.mov
 docs/*.MOV
+/marketing/

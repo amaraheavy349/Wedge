@@ -13,6 +13,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/wwaannttyy/Wedge/actions/workflows/build.yml"><img src="https://github.com/wwaannttyy/Wedge/actions/workflows/build.yml/badge.svg" alt="Build status"></a>
   <img src="https://img.shields.io/badge/macOS-14%2B-blue" alt="macOS 14+">
   <img src="https://img.shields.io/badge/Swift-6.3-orange" alt="Swift 6.3">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">

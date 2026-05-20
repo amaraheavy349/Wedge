@@ -1,0 +1,28 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Swift version
+        run: swift --version
+
+      - name: Build
+        run: swift build -c release
+
+      - name: Build .app bundle
+        run: ./build.sh release
+
+      - name: Sanity check bundle
+        run: |
+          test -f build/Wedge.app/Contents/MacOS/Wedge
+          test -f build/Wedge.app/Contents/Info.plist
+          codesign --verify --verbose=2 build/Wedge.app || true
